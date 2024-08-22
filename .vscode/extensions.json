@@ -1,7 +1,11 @@
 {
+<<<<<<< HEAD
   "recommendations": [
     "Vue.volar",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode"
   ]
+=======
+  "recommendations": ["Vue.volar", "Vue.vscode-typescript-vue-plugin"]
+>>>>>>> L3-start
 }

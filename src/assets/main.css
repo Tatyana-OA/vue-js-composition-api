@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 @import './base.css';
+=======
+@import "./base.css";
+>>>>>>> L3-start
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+<<<<<<< HEAD
+=======
+
+>>>>>>> L3-start
   font-weight: normal;
 }
 
@@ -12,7 +20,10 @@ a,
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
+<<<<<<< HEAD
   padding: 3px;
+=======
+>>>>>>> L3-start
 }
 
 @media (hover: hover) {

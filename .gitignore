@@ -26,5 +26,8 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 
 *.tsbuildinfo
+=======
+>>>>>>> L3-start
