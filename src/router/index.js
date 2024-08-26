@@ -9,7 +9,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: EventListView
+      component: EventListView,
+      // Props as a function -> find query param page and set it to route param page, if not, default to 1
+      props: (route) => {
+        return { page: parseInt(route.query.page) } || 1
+      }
     },
     // {
     //   path: '/about',

@@ -1,34 +1,214 @@
 {
   "events": [
     {
-      "id": 123,
+      "id": 101,
+      "category": "environment",
+      "title": "Tree Planting Day",
+      "description": "Join us in planting trees to help reforest the area.",
+      "location": "Greenwood Park",
+      "date": "April 5, 2022",
+      "time": "09:00",
+      "organizer": "Sylvia Woods"
+    },
+    {
+      "id": 102,
+      "category": "health",
+      "title": "Yoga in the Park",
+      "description": "Relax and unwind with a community yoga session.",
+      "location": "Sunset Park",
+      "date": "June 18, 2022",
+      "time": "08:00",
+      "organizer": "Zenna Light"
+    },
+    {
+      "id": 103,
+      "category": "education",
+      "title": "STEM Workshop for Kids",
+      "description": "Interactive science and tech activities for children.",
+      "location": "Techie School",
+      "date": "May 20, 2022",
+      "time": "14:00",
+      "organizer": "Dr. Innovate"
+    },
+    {
+      "id": 104,
       "category": "animal welfare",
-      "title": "Cat Adoption Day",
-      "description": "Find your new feline friend at this event.",
-      "location": "Meow Town",
-      "date": "January 28, 2022",
-      "time": "12:00",
-      "organizer": "Kat Laydee"
+      "title": "Dog Training Basics",
+      "description": "Learn the basics of training your dog.",
+      "location": "Bark Park",
+      "date": "February 11, 2022",
+      "time": "15:00",
+      "organizer": "Rufus Trainer"
     },
     {
-      "id": 456,
+      "id": 105,
       "category": "food",
-      "title": "Community Gardening",
-      "description": "Join us as we tend to the community edible plants.",
-      "location": "Flora City",
-      "date": "March 14, 2022",
-      "time": "10:00",
-      "organizer": "Fern Pollin"
+      "title": "Farmers' Market",
+      "description": "Fresh produce and local goods every weekend.",
+      "location": "Market Square",
+      "date": "Every Saturday",
+      "time": "07:00",
+      "organizer": "Local Farmers Association"
     },
     {
-      "id": 789,
+      "id": 106,
       "category": "sustainability",
-      "title": "Beach Cleanup",
-      "description": "Help pick up trash along the shore.",
-      "location": "Playa Del Carmen",
-      "date": "July 22, 2022",
+      "title": "Recycling Workshop",
+      "description": "Learn how to recycle effectively and reduce waste.",
+      "location": "Eco Center",
+      "date": "March 25, 2022",
+      "time": "13:00",
+      "organizer": "Green Team"
+    },
+    {
+      "id": 107,
+      "category": "arts",
+      "title": "Street Art Festival",
+      "description": "Watch live art performances and graffiti displays.",
+      "location": "Urban Alley",
+      "date": "August 12, 2022",
+      "time": "16:00",
+      "organizer": "Art Collective"
+    },
+    {
+      "id": 108,
+      "category": "culture",
+      "title": "Cultural Heritage Fair",
+      "description": "Celebrate the diverse cultures in our community.",
+      "location": "Heritage Hall",
+      "date": "September 1, 2022",
+      "time": "10:00",
+      "organizer": "Diversity Council"
+    },
+    {
+      "id": 109,
+      "category": "sports",
+      "title": "Community Fun Run",
+      "description": "A 5K run for all ages, promoting health and fitness.",
+      "location": "Central Park",
+      "date": "October 10, 2022",
+      "time": "07:00",
+      "organizer": "RunForLife"
+    },
+    {
+      "id": 110,
+      "category": "music",
+      "title": "Jazz in the Park",
+      "description": "Enjoy an evening of live jazz music.",
+      "location": "Harmony Square",
+      "date": "June 30, 2022",
+      "time": "18:00",
+      "organizer": "Jazz Society"
+    },
+    {
+      "id": 111,
+      "category": "charity",
+      "title": "Food Drive",
+      "description": "Donate non-perishable items to help those in need.",
+      "location": "Community Center",
+      "date": "November 22, 2022",
+      "time": "09:00",
+      "organizer": "Helping Hands"
+    },
+    {
+      "id": 112,
+      "category": "health",
+      "title": "Blood Donation Camp",
+      "description": "Give the gift of life by donating blood.",
+      "location": "City Hospital",
+      "date": "December 15, 2022",
+      "time": "10:00",
+      "organizer": "RedCross Volunteers"
+    },
+    {
+      "id": 113,
+      "category": "environment",
+      "title": "River Cleanup",
+      "description": "Volunteer to clean up our local rivers.",
+      "location": "Riverbank Park",
+      "date": "May 8, 2022",
+      "time": "09:00",
+      "organizer": "Water Warriors"
+    },
+    {
+      "id": 114,
+      "category": "food",
+      "title": "Vegan Cooking Class",
+      "description": "Learn to cook delicious vegan dishes.",
+      "location": "Chef's Kitchen",
+      "date": "July 15, 2022",
       "time": "11:00",
-      "organizer": "Carey Wales"
+      "organizer": "Chef Verde"
+    },
+    {
+      "id": 115,
+      "category": "arts",
+      "title": "Local Theater Night",
+      "description": "Enjoy a play performed by local artists.",
+      "location": "Grand Theater",
+      "date": "April 20, 2022",
+      "time": "19:00",
+      "organizer": "Thespian Group"
+    },
+    {
+      "id": 116,
+      "category": "education",
+      "title": "Book Fair",
+      "description": "Explore new books and meet authors.",
+      "location": "Booktown",
+      "date": "August 25, 2022",
+      "time": "10:00",
+      "organizer": "Literary Society"
+    },
+    {
+      "id": 117,
+      "category": "culture",
+      "title": "International Food Festival",
+      "description": "Taste foods from around the world.",
+      "location": "Global Plaza",
+      "date": "September 10, 2022",
+      "time": "12:00",
+      "organizer": "World Tastes"
+    },
+    {
+      "id": 118,
+      "category": "sports",
+      "title": "Soccer Tournament",
+      "description": "Watch local teams compete in a soccer tournament.",
+      "location": "Sports Arena",
+      "date": "June 5, 2022",
+      "time": "14:00",
+      "organizer": "City League"
+    },
+    {
+      "id": 119,
+      "category": "music",
+      "title": "Rock Concert",
+      "description": "Live performance by local rock bands.",
+      "location": "Rockland",
+      "date": "July 29, 2022",
+      "time": "20:00",
+      "organizer": "Music Fusion"
+    },
+    {
+      "id": 120,
+      "category": "charity",
+      "title": "Charity Auction",
+      "description": "Bid on items to raise funds for a good cause.",
+      "location": "Auction House",
+      "date": "November 18, 2022",
+      "time": "18:00",
+      "organizer": "Charity Begins"
+    },
+    {
+      "id": 121,
+      "category": "sustainability",
+      "title": "Solar Energy Workshop",
+      "description": "Learn about the benefits and setup of solar energy.",
+      "location": "Eco Center",
+      "date": "October 3, 2022",
+      "time": "15:00",
+      "organizer": "Sunny Days"
     }
   ]
 }
