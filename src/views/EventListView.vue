@@ -3,6 +3,7 @@ import EventService from '../services/EventService.js'
 import EventCard from '../components/EventCard.vue'
 import { ref, onMounted, computed } from 'vue'
 import { watchEffect } from 'vue';
+import router from '@/router';
 
 const events = ref(null)
 // Looking for a prop called page
@@ -27,7 +28,9 @@ onMounted(() => {
           'x-total-count'
         ]
       })
-      .catch((err) => console.error(err))
+      .catch(() => {
+        router.push({ name: 'NetworkErr' })
+      })
   })
 
 })

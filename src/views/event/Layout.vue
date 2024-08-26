@@ -2,14 +2,28 @@
 import { ref, onMounted } from 'vue'
 import EventService from '../../services/EventService'
 import { useRoute } from 'vue-router'
+import router from '@/router';
 
 const event = ref(null)
 const route = useRoute()
 
+const triggerNotFound = (error) => {
+    if (error.response && error.response.status == 404) {
+        router.push({ name: '404Resource', params: { resource: 'event' } })
+    } else {
+        router.push({ name: 'NetworkErr' })
+    }
+
+}
+
 onMounted(() => {
     EventService.getEventById(route.params.id)
-        .then((response) => (event.value = response.data))
-        .catch((err) => console.error(err))
+        .then((response) => {
+            event.value = response.data
+        })
+        .catch((error) => {
+            triggerNotFound(error);
+        })
 })
 </script>
 <template>
