@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { inject } from 'vue';
+const store = inject('store')
 </script>
 
 <template>
@@ -12,6 +14,9 @@ import { RouterLink, RouterView } from 'vue-router'
         </nav>
       </div>
     </header>
+    <div id="flashMessage" v-if="store.flashMessage">
+      {{ store.flashMessage }}
+    </div>
   </div>
   <!-- Outlet in React -->
   <RouterView />
@@ -25,6 +30,14 @@ import { RouterLink, RouterView } from 'vue-router'
   -moz-osx-font-soothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#flashMessage {
+  animation-name: yellowfade;
+  animation-duration: 3s;
+  color: rgb(119, 31, 13);
+  font-weight: bold;
+  padding: 0 0 0.5rem 0;
 }
 
 nav {
