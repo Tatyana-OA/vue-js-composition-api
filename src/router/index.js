@@ -27,12 +27,13 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue')
     // }
     {
-      path: '/about',
+      path: '/about-us',
       name: 'about',
+      alias: '/about',
       component: AboutView
     },
     {
-      path: '/event/:id',
+      path: '/events/:id',
       props: true,
       name: 'EventLayout',
       component: EventLayout,
@@ -54,6 +55,20 @@ const router = createRouter({
           name: 'EventEdit',
           component: EventEdit
         }
+      ]
+    },
+    // Redirecting all /event/:id to /eventS/:id
+    {
+      path: '/event/:id',
+      redirect: () => {
+        return {
+          name: 'EventDetails'
+        }
+      },
+      // Redirecting the nested routes
+      children: [
+        { path: 'register', redirect: () => ({ name: 'EventRegister' }) },
+        { path: 'edit', redirect: () => ({ name: 'EventEdit' }) }
       ]
     }
   ]
