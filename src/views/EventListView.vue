@@ -18,7 +18,6 @@ const hasNextPage = computed(() => {
 
 onMounted(() => {
   // Two events per page; much like useEffect dependency array; page.value is the reactive value
-  console.log(page)
   watchEffect(() => {
     events.value = null
     EventService.getEvents(2, page.value)

@@ -5,6 +5,9 @@ const store = inject('store')
 </script>
 
 <template>
+  <div id="flashMessage" v-if="store.flashMessage">
+    {{ store.flashMessage }}
+  </div>
   <div class="layout">
     <header>
       <div class="wrapper">
@@ -14,9 +17,7 @@ const store = inject('store')
         </nav>
       </div>
     </header>
-    <div id="flashMessage" v-if="store.flashMessage">
-      {{ store.flashMessage }}
-    </div>
+
   </div>
   <!-- Outlet in React -->
   <RouterView />
@@ -35,9 +36,11 @@ const store = inject('store')
 #flashMessage {
   animation-name: yellowfade;
   animation-duration: 3s;
-  color: rgb(119, 31, 13);
+  color: #000000;
   font-weight: bold;
-  padding: 0 0 0.5rem 0;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  background: #81e3b2;
 }
 
 nav {

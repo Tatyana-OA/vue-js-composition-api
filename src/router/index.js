@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import EventListView from '../views/EventListView.vue'
-import AboutView from '../views/AboutView.vue'
 import EventDetails from '../views/event/Details.vue'
 import EventEdit from '../views/event/Edit.vue'
 import EventRegister from '../views/event/Register.vue'
@@ -20,24 +19,18 @@ const router = createRouter({
         return { page: parseInt(route.query.page) || 1 }
       }
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue')
-    // }
+    // Lazy load "About"
     {
       path: '/about-us',
       name: 'about',
       alias: '/about',
-      component: AboutView
+      component: () => import('../views/AboutView.vue')
     },
     {
       path: '/events/:id',
       props: true,
       name: 'EventLayout',
+
       component: EventLayout,
       // /event/:id will be inherited by all children
       children: [
@@ -55,7 +48,10 @@ const router = createRouter({
         {
           path: 'edit',
           name: 'EventEdit',
-          component: EventEdit
+          component: EventEdit,
+          meta: {
+            requireAuth: true
+          }
         }
       ]
     },
@@ -69,9 +65,13 @@ const router = createRouter({
       },
       // Redirecting the nested routes
       children: [
-        { path: 'register', redirect: () => ({ name: 'EventRegister' }) },
+        {
+          path: 'register',
+          redirect: () => ({ name: 'EventRegister' })
+        },
         { path: 'edit', redirect: () => ({ name: 'EventEdit' }) }
       ]
+      // Will serve for route guarding
     },
     // No resource found
     {
@@ -88,7 +88,14 @@ const router = createRouter({
     },
     // Accessing a page that doesn't exist
     { path: '/:pathMatch(.*)*', redirect: '/' }
-  ]
+  ],
+  // Scroll to top by default
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+    return { top: 0 }
+  }
 })
 
 export default router
